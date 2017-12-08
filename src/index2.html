@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>viewport和像素</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/font-awesome.css">
+  <style>
+    * {
+      /* 会将border和padding统一计算在width height里面 */
+      /* box-sizing: border-box; */
+    }
+    /* .box{
+      width: 300px;
+      height: 300px;
+      background: red;
+    } */
+
+    .music-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 45px;
+      /* padding: 30px 0; */
+      background: red;
+    }
+    .music-box .song-detail{
+      display: flex;
+
+      width: calc(100% - (750 - 332)px);
+    }
+    .music-box .song-detail .text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .music-box .thumb {
+      width: 36px;
+      height: 36px;
+    }
+
+    .music-box .thumb img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    css像素：为开发人员准备的标尺单位
+    物理像素：移动设备的尺寸
+
+    1物理像素 = 2css像素
+    1物理像素 = 4css像素
+
+    dpr : css像素和物理像素的比例
+   -->
+  <!-- <div class="box"></div> -->
+
+  <!-- 
+    1.viewport 初始化网页宽度为设备宽度
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    2.量出来的尺寸要除以2，因为dpr
+   -->
+  <section class="music-box">
+    <div class="song-detail">
+      <div class="thumb">
+        <img src="./img/thumb.jpg" alt="">
+      </div>
+      <div class="text">
+        <h4>不该(with AMEI)</h4>
+        <span>周杰伦</span>
+      </div>
+    </div>
+    <div class="music-control">
+      <span class="fa fa-play"></span>
+    </div>
+  </section>
+</body>
+
+</html>

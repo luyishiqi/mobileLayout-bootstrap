@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rem</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!-- 
+    em:相对于元素自身的字体大小进行计算，如果没有设置字体大小，相对父元素的字体大小
+    rem:相对于根元素的字体大小进行计算
+   -->
+   <style>
+ 
+ 
+     /* .box{
+       font-size: 10px;
+       width: 10em;
+       height: 10em;
+       background: red;
+     } */
+     .music-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 0.9rem;
+      /* padding: 30px 0; */
+      background: red;
+    }
+    .music-box .song-detail{
+      display: flex;
+
+      width: calc(100% - (750 - 332)px);
+    }
+    .music-box .song-detail .text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .music-box .thumb {
+      width:0.72rem;
+      height: 0.72rem;
+    }
+
+    .music-box .thumb img {
+      width: 100%;
+      height: auto;
+    }
+   </style>
+</head>
+<body>
+    <section class="music-box">
+        <div class="song-detail">
+          <div class="thumb">
+            <img src="./img/thumb.jpg" alt="">
+          </div>
+          <div class="text">
+            <h4>不该(with AMEI)</h4>
+            <span>周杰伦</span>
+          </div>
+        </div>
+        <div class="music-control">
+          <span class="fa fa-play"></span>
+        </div>
+    </section>
+    <script src="js/lib/jquery.js"></script>
+    <!-- 引入该js后，所有设计稿量出来的尺寸，直接除以100，单位使用rem -->
+    <script src="js/flexible.js"></script>
+    <script>
+      console.log($(window).height(),$(window).width());
+    </script>
+</body>
+</html>
