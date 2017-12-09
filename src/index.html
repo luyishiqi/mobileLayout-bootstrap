@@ -1,20 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>移动端布局</title>
-  <link rel="stylesheet" href="./css/reset.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .box {
+      position: fixed;
+      width: 100%;
+      height: 99999px;
+      background: red;
+    }
+  </style>
 </head>
+
 <body>
-  Beautify              格式化文件的插件
-  code Runner           直接右键运行js代码，必须要安装node
-  auto close tag        自动关闭标签
-  auto rename tag       自动修改标签名
-  vscode-icons          文件图标
-  view in Browser       使用浏览器打开html，本地环境静态页面 ctrl+f1
-  path interllisense    自动补全路径
-  jquery Code Snippets  jq代码提示
+  <div class="box">
+    富家大室卡拉胶发
+  </div>
+  <script src="./js/flexible.js"></script>
+  <script src="./js/lib/jquery.js"></script>
+  <script>
+    // var startx = 0,
+    //   starty = 0;
+    // $('.box').on('touchstart', function (e) {
+    //   var touch = e.originalEvent.touches[0];
+    //   var x = touch.clientX,
+    //     y = touch.clientY;
+    //   startx = x;
+    //   starty = y;
+    // })
+
+    // $('.box').on('touchmove', function (e) {
+    //   var touch = e.originalEvent.touches[0];
+    //   var x = touch.clientX,
+    //     y = touch.clientY;
+    //   var offsetX = x - startx,
+    //     offsetY = y - starty;
+    //   // console.log(Math.atan2(x, y) * (180 / Math.PI));
+    //   console.log(Math.atan2(offsetY, offsetX) * 180 / Math.PI)
+    // })
+
+
+
+    // $('.box').on('touchend', function (e) {
+    //   var touch = e.originalEvent.changedTouches[0];
+    //   // console.log(touch);
+    //   var x = touch.clientX,
+    //     y = touch.clientY;
+    //   // console.log(x,y);
+    //   var offsetX = x - startx,
+    //     offsetY = y - starty;
+
+    //   // js计算角度的公式
+    //   /*
+    //     得出点2与点1 的 偏差值
+    //   */
+    //   var angle = Math.atan2(offsetY, offsetX) * 180 / Math.PI
+    //   console.log(angle);
+    //   if (angle < 45 && angle > -45) {
+    //     console.log('右');
+    //   } else if (angle >= 45 && angle < 135) {
+    //     console.log('下')
+    //   } else if (angle < -135 || angle > 135) {
+    //     console.log('座')
+    //   } else if (angle <= -135 || angle < -45) {
+    //     console.log('上')
+    //   }
+    // })
+    /*
+      ontouchstart                onmousedown
+      ontouchmove                 onmousemove
+      ontouchend                  onmouseup
+    */
+
+    // 如何判断手势滑动方向
+
+    $.fn.touch = function (dir, fn) {
+      var startx = 0,
+        starty = 0,
+        dx = 0,
+        dy = 0;
+      var $this = this;
+      var startTime = 0;
+
+      function getAngle(offsetX, offsetY) {
+        return Math.atan2(offsetY, offsetX) * 180 / Math.PI;
+      }
+
+      function getDir(ffsetX, offsetY) {
+        var angle = getAngle(ffsetX, offsetY);
+        var result = '';
+        if (angle < 45 && angle > -45) {
+          result = 'Right';
+        } else if (angle >= 45 && angle < 135) {
+          result = 'Down'
+        } else if (angle < -135 || angle > 135) {
+          result = 'Left'
+
+        } else if (angle <= -135 || angle < -45) {
+          result = 'Up'
+        }
+        return result;
+      }
+
+      return this.each(function (ele) {
+        // console.log('touch')
+        // console.log($this);
+        $this.on('touchstart', function (e) {
+          var touch = e.originalEvent.touches[0];
+          var x = touch.clientX,
+            y = touch.clientY;
+          startx = x;
+          starty = y;
+          startTime = Date.now();
+        })
+        $this.on('touchmove', function (e) {
+          var touch = e.originalEvent.touches[0];
+          // console.log(touch);
+          var x = touch.clientX,
+            y = touch.clientY;
+          // console.log(x,y);
+          var endTime = Date.now();
+          // console.log(endTime - startTime, '总耗时'); // s = v*t 
+          var offsetX = x - startx,
+            offsetY = y - starty;
+          e.vx = offsetX / (endTime - startTime);
+          e.vy = offsetY / (endTime - startTime);
+          e.offsetX = offsetX;
+          e.offsetY = offsetY;
+          e.startx = startx;
+          e.starty = starty;
+          e.currentX = x;
+          e.currentY = y;
+          e.type = dir;
+          if ('slide' + getDir(offsetX, offsetY) + 'Move' === dir) {
+            console.log(dir)
+            fn.call($this, e);
+          } else if (dir === 'slideMove') {
+            fn.call($this, e);
+          }
+          startTime = endTime;
+        })
+        $this.on('touchend', function (e) {
+          var touch = e.originalEvent.changedTouches[0];
+          // console.log(touch);
+          var x = touch.clientX,
+            y = touch.clientY;
+          // console.log(x,y);
+          var offsetX = x - startx,
+            offsetY = y - starty;
+          e.offsetX = offsetX;
+          e.offsetY = offsetY;
+          e.startx = startx;
+          e.starty = starty;
+          e.type = dir;
+          if ('slide' + getDir(offsetX, offsetY) === dir) {
+
+            fn.call($this, e);
+          }
+        })
+      })
+    }
+    $('.box').touch('slideLeft', function (e) {
+      console.log(e);
+    });
+
+    $('.box').touch('slideUp', function (e) {
+      console.log(e);
+    });
+    $('.box').touch('slideRightMove', function (e) {
+      console.log(e);
+    })
+
+
+    // $('.box').touch('slideUpMove', function (e) {
+    //   var offsetY = e.offsetY;
+    //   $(this).css({
+    //     top: $(this).offset().top + e.vy
+    //   })
+    // })
+
+    $('.box').touch('slideMove', function (e) {
+      $(this).css({
+        top: $(this).offset().top + (e.offsetY/10)
+      })
+    })
+  </script>
 </body>
+
 </html>

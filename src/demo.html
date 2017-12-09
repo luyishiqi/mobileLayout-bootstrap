@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全屏滚动</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-container {
+      height: 100%;
+      width: 100%;
+    }
+
+    .page1 {
+      background: lightblue;
+    }
+
+    .page2 {
+      background: lightcoral;
+    }
+
+    .page3 {
+      background: lightgreen;
+    }
+
+    .page4 {
+      background: lightseagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="swiper-container">
+    <section class="swiper-wrapper">
+      <section class="swiper-slide page1">
+        <h1 class="animated" animate-name="slideInLeft">父级圣诞快乐附近可拉伸</h1>
+      </section>
+      <section class="swiper-slide page2">
+          <h1 class="animated" animate-name="slideInRight">父级圣诞快乐附近可拉伸</h1>
+      </section>
+      <section class="swiper-slide page3">
+        12321
+      </section>
+      <section class="swiper-slide page4">
+
+      </section>
+    </section>
+  </section>
+  <script src="js/swiper.js"></script>
+  <script src="js/lib/jquery.js"></script>
+  <script>
+    // new WOW().init();
+$('.animated').on('transitionEnd',function(e,data){
+
+  var animateName = $(this).attr('animate-name');
+  $(this).addClass(animateName);
+  $('.page'+(data.prevIndex-1)).find('.animated').trigger('leaver');
+})
+
+$('.animated').on('leaver',function(){
+  console.log(this);
+  var animateName = $(this).attr('animate-name');
+  $(this).removeClass(animateName);
+})
+
+    var mySwiper = new Swiper('.swiper-container', {
+      initialSlide: 0, //初始化第一个slide
+      direction: 'vertical', //设置方向
+      loop: true, //是否需要无限循环
+      speed: 1000, //duration
+      on: {
+        transitionEnd: function () {
+          $('.page'+this.activeIndex).find('.animated').trigger('transitionEnd',{prevIndex:this.previousIndex});
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
