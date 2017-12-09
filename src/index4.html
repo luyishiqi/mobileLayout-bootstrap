@@ -35,9 +35,9 @@
     })
 
     $('.box').on('touchmove', function (e) {
-      // var touch = e.originalEvent.touches[0];
-      // var x = touch.clientX,y=touch.clientY;
-      // console.log(x,y);
+      var touch = e.originalEvent.touches[0];
+      var x = touch.clientX,y=touch.clientY;
+      console.log(Math.atan2(x,y)*(180/Math.PI));
     })
 
 
@@ -50,7 +50,7 @@
       // console.log(x,y);
       var offsetX = x - startx,
         offsetY = y - starty;
-      console.log(Math.atan2(x,y)*(Math.PI/180));
+      console.log(Math.atan2(x,y)*(180/Math.PI));
       console.log(offsetX);
       if (offsetX < 0) {
         console.log('left')
