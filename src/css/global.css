@@ -1,0 +1,342 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+
+  vertical-align: baseline;
+  font-weight: normal;
+  font-family: "微软雅黑";
+  font-style: normal;
+}
+img {
+  /* display: block; */
+  vertical-align: middle;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after,
+.clearfix::before {
+  clear: both;
+  content: "";
+  display: block;
+}
+.icon_tuan {
+  display:inline-block;
+  height: 71px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.icon_tuan::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -0px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_tea-friends {
+  display:inline-block;
+  height: 70px;
+  width: 69px;
+  overflow: hidden;
+}
+
+.icon_tea-friends::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -70px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_brand-guan {
+  display:inline-block;
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.icon_brand-guan::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -139px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_home-active {
+  display:inline-block;
+  height: 41px;
+  width: 45px;
+  overflow: hidden;
+}
+
+.icon_home-active::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -209px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_home {
+  display:inline-block;
+  height: 41px;
+  width: 45px;
+  overflow: hidden;
+}
+
+.icon_home::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -254px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_cart {
+  display:inline-block;
+  height: 40px;
+  width: 47px;
+  overflow: hidden;
+}
+
+.icon_cart::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -299px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_cart-active {
+  display:inline-block;
+  height: 40px;
+  width: 47px;
+  overflow: hidden;
+}
+
+.icon_cart-active::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -346px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_classify {
+  display:inline-block;
+  height: 39px;
+  width: 39px;
+  overflow: hidden;
+}
+
+.icon_classify::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -393px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_classify-active {
+  display:inline-block;
+  height: 39px;
+  width: 39px;
+  overflow: hidden;
+}
+
+.icon_classify-active::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -432px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_my {
+  display:inline-block;
+  height: 33px;
+  width: 53px;
+  overflow: hidden;
+}
+
+.icon_my::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -471px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_my-active {
+  display:inline-block;
+  height: 33px;
+  width: 53px;
+  overflow: hidden;
+}
+
+.icon_my-active::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -524px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_bull {
+  display:inline-block;
+  height: 32px;
+  width: 22px;
+  overflow: hidden;
+}
+
+.icon_bull::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -577px -0px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_search {
+  display:inline-block;
+  height: 31px;
+  width: 31px;
+  overflow: hidden;
+}
+
+.icon_search::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -0px -71px no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.icon_check {
+  display:inline-block;
+  height: 16px;
+  width: 23px;
+  overflow: hidden;
+}
+
+.icon_check::after {
+  content:"";
+  display:block;
+  background: url(../img/icons.png) -209px -41px no-repeat;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,183 @@
+.line {
+  height: 0.226667rem;
+  background-color: #f1f2f4;
+}
+
+.header {
+  position: relative;
+  line-height: 1.173333rem;
+  height: 1.173333rem; /* 88/75 */
+}
+.header h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* background: red; */
+  width: 100%;
+  text-align: center;
+  font-size: 0.453333rem;
+  color: #cfa767;
+}
+.header .control {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  /* background: green; */
+  margin-right: 0.36rem;
+}
+.header .control li {
+  width: 0.413333rem;
+  margin-right: 0.346667rem;
+}
+.header .control li img {
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.306667rem; /* 98/75 */
+  border-top: 0.013333rem solid #dddddf;
+  display: flex;
+  justify-content: space-around;
+}
+.nav li {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav li .thumb {
+  width: 0.546667rem;
+  height: 0.546667rem;
+  /* background-color: #cfa767; */
+  margin-bottom: 0.133333rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav li .thumb img {
+  width: 100%;
+  height: auto;
+}
+
+.nav li img.active-png {
+  display: none;
+}
+.nav li.active img {
+  display: none;
+}
+.nav li.active span {
+  color: #cfa767;
+}
+.nav li.active img.active-png {
+  display: block;
+}
+
+.swiper-container {
+  width: 100%;
+  /* height: 4.226667rem 317/75; */
+}
+.swiper-container img {
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.173333rem;
+  padding-bottom: 0.2rem;
+}
+.main-nav a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.main-nav a img {
+  margin-bottom: 0.2rem;
+}
+.main-nav a span {
+  font-size: 0.293333rem;
+  color: #535353;
+}
+
+
+.sales h2{
+  line-height: .84rem /* 63/75 */;
+  color: #cfa767;
+  border-bottom: .013333rem /* 1/75 */ solid #dddddd;
+  padding-left: .68rem /* 51/75 */;
+  position: relative;
+  font-size: .346667rem /* 26/75 */;
+  font-weight: bold;
+}
+.sales h2::before{
+  content: '';
+  position: absolute;
+  width: .133333rem /* 10/75 */;
+  height: .133333rem /* 10/75 */;
+  border-radius: 100%;
+  background-color: #cfa767;
+  top: 50%;
+  
+  margin-top: -.066667rem /* 5/75 */;
+  left: .373333rem /* 28/75 */;
+}
+
+.sales .shop{
+  padding:.12rem /* 9/75 */ .133333rem /* 10/75 */ .186667rem /* 14/75 */ .266667rem /* 20/75 */;
+}
+.sales .shop+.shop{
+  border-left: .013333rem /* 1/75 */ solid #ddd;
+ 
+}
+
+.img{
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 10%;
+}
+.col-2 {
+  width: 20%;
+}
+.col-3 {
+  width: 30%;
+}
+
+.col-4 {
+  width: 40%;
+}
+.col-5 {
+  width: 50%;
+}
+.col-6 {
+  width: 60%;
+}
+
+.col-7 {
+  width: 70%;
+}
+.col-8 {
+  width: 80%;
+}
+.col-9 {
+  width: 90%;
+}
+
+.col-10 {
+  width: 100%;
+}
