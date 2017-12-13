@@ -1,0 +1,39 @@
+color=red
+allCol=12
+screenXs=max-width:768px
+.box{
+  width 100px
+  .text{
+     text-align: center 
+     color:color
+  }  
+}
+
+
+// mixin 宏 代码生成器
+
+css3(attr,value)
+  for pre in '' -o- -webkit- -ms- -moz-
+    {pre}{attr}:value
+  
+media(type)
+  if type==xs
+    @media (max-width:768px){
+      content  
+    }
+
+.box{
+  css3(transform,rotate(30deg))  
+}
+
+
+
+for item,index in xs sm md lg
+  for value in 1 2 3 4 5 6 7 8 9 10 11 12
+    if item==xs 
+      @media (screenXs){
+        .col-{item}-{value}{
+          width (100%/allCol)*value  
+        }  
+      }
+

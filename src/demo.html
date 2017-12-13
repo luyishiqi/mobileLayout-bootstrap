@@ -1,202 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/global.css">
-  <!-- <script src="./js/flexible.min.js"></script> -->
+  <link rel="stylesheet" href="css/bootstrap.css">
   <style>
-    /* 手机设备 */
-    *{
-      transition: all 0.5s;
-    }
-    .title{
-      text-align: center;
-      font-size: 24px;
-      color: #47a3da;
-      padding-top: 30px ;
-      padding-bottom: 76px; 
-      font-weight: bold;
-    }
-    .list{
-      width: 84.4%;
-      margin: 0 auto;
-    }
-    .list li{
-      width: 100%;
-      position: relative;
-      padding-bottom: 33px;
-    
-    }
-    .list li .time{
-     
-    }
-    .list li .time .date{
-      color: #bdd0db;
-      font-size:8px/* 16/75 */
-    }
-    .list li .time time{
-      display: block;
-      font-size: 13px /* 26/75 */;
-      color: #6cbfee;
-      font-weight: bold;
-      margin-top:4px; /* 18/75 */
-    }
- 
-    .list article{
-      position: relative;
-      margin-top: 25px;
-      background: #6cbfee;
-      padding: 21.5px /* 43/75 */16px /* 32/75 */;
-      border-radius: 4.5px /* 9/75 */;
-    }
-    .list article::after{
-      content: '';
-      position: absolute;
-      top: -10px;
-      width: 0;
-      height: 0;
-      border-width: 5px; /* 10/75 *//* 10/75 */;
-      border-color:transparent transparent #6cbfee ;
-      border-style: solid; 
-    }
-    .list article h2{
-      color: #fff;
-      font-size: 16px;
-      line-height: 1.5;
-      border-bottom: 1px solid rgba(255, 255, 255, .5);
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .list article p{
-        font-size: 14px;
-        line-height: 1.8;
-        color: #fff;
-    }
-    @media (min-width:768px /* 768/75 */){
-      /* 平板设备 */
-      .title{
-        padding-bottom: 2rem /* 150/75 */;
-        font-size:37px /* 37/75 */;
-      }
-      .list{
-        
-      }
-      .list li{
-        overflow: hidden;
-        position: relative;
-      }
-      .list li .time{
-        float: left;
-        margin-right: 67px;
-      }
-      .list li .time .date{
-        font-size: 16px;
-      }
-      .list li .time time{
-        text-align: right;
-        font-size: 18px;
-      }
-      .list li article{
-        margin-top: 0;
-        float: left;
-        width: 70%;
-      }
-      .list li article::after{
-        top: 10px;
-        left: -10px;
-        border-color: transparent #6cbfee transparent transparent;
-      }
-      .list li::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 114px;
-        width: 10px;
-        background-color:   #afdcf8;
-        height: 100%;
-      }
-    }
-    @media (min-width:1080px /* 1080/75 */){
-     /* 电脑设备 */
-     .title{
-       text-indent:203px /* 203/75 */;
-       text-align: left;
-       padding-bottom: 180px /* 180/75 */;
-       font-size: 40px;/* 40/75 */;
-     }
-     .list li .time .dete{
-       font-size: 20px;
-     }
-     .list li .time time{
-       font-size: 30px;
-     }
-     /* .list li::before{
-       left: 140px;
-     } */
+    .mystyle [class^="col-"]{
+      border: 1px solid #ccc;
     }
   </style>
 </head>
+
 <body>
-  <h1 class="title">
-    Responsive Timeline
-  </h1>
-  <ul class="list">
-    <li>
-      <div class="time">
-        <p class="date">2016-05-01</p>
-        <time>18:30</time>
+  <section class="container">
+    <div class="row mystyle">
+      <div class="col-md-8">
+        <img src="./img/face.png" alt="">
       </div>
-      <article>
-        <h2>Lorem hic odit pariatur, dolores voluptatibus deleniti minima consequuntur quisquam natus, ex ratione consequatur. Eveniet nostrum facere minus temporibus.</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam ab quod sint! Nostrum sit accusamus repellendus officia dignissimos nesciunt fuga minus, non eius, corrupti esse libero voluptatum magnam rem.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, nemo assumenda. Numquam, id sequi quam ducimus vel cumque amet laborum quo excepturi ea exercitationem doloribus ipsa animi adipisci reiciendis ab!
-        </p>
-      </article>
-    </li>
-    <li>
-      <div class="time">
-        <p class="date">2016-05-01</p>
-        <time>18:30</time>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="./img/small-face.png" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <img src="./img/small-face2.png" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <img src="./img/small-face3.png" alt="">
+          </div>
+        </div>
       </div>
-      <article>
-        <h2>Lorem hic odit pariatur, dolores voluptatibus deleniti minima consequuntur quisquam natus, ex ratione consequatur. Eveniet nostrum facere minus temporibus.</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam ab quod sint! Nostrum sit accusamus repellendus officia dignissimos nesciunt fuga minus, non eius, corrupti esse libero voluptatum magnam rem.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, nemo assumenda. Numquam, id sequi quam ducimus vel cumque amet laborum quo excepturi ea exercitationem doloribus ipsa animi adipisci reiciendis ab!
-        </p>
-      </article>
-    </li>
-    <li>
-      <div class="time">
-        <p class="date">2016-05-01</p>
-        <time>18:30</time>
-      </div>
-      <article>
-        <h2>Lorem hic odit pariatur, dolores voluptatibus deleniti minima consequuntur quisquam natus, ex ratione consequatur. Eveniet nostrum facere minus temporibus.</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam ab quod sint! Nostrum sit accusamus repellendus officia dignissimos nesciunt fuga minus, non eius, corrupti esse libero voluptatum magnam rem.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, nemo assumenda. Numquam, id sequi quam ducimus vel cumque amet laborum quo excepturi ea exercitationem doloribus ipsa animi adipisci reiciendis ab!
-        </p>
-      </article>
-    </li>
-    <li>
-      <div class="time">
-        <p class="date">2016-05-01</p>
-        <time>18:30</time>
-      </div>
-      <article>
-        <h2>Lorem hic odit pariatur, dolores voluptatibus deleniti minima consequuntur quisquam natus, ex ratione consequatur. Eveniet nostrum facere minus temporibus.</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam ab quod sint! Nostrum sit accusamus repellendus officia dignissimos nesciunt fuga minus, non eius, corrupti esse libero voluptatum magnam rem.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, nemo assumenda. Numquam, id sequi quam ducimus vel cumque amet laborum quo excepturi ea exercitationem doloribus ipsa animi adipisci reiciendis ab!
-        </p>
-      </article>
-    </li>
-  </ul>
+    </div>
+  </section>
 </body>
+
 </html>

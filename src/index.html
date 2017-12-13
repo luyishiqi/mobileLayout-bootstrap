@@ -1,72 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="css/global.css">
-  <style>
-    .box {
-      width: 1200px;
-      height: 500px;
-      background: red;
-    }
-    /* 
-      screen 表示电脑 手机  平板
-      max-width   小于
-      min-width   大于
-      webkit-device-pixel-ratio  dpr
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!-- 
 
+    lt <
+    gt >
+    lte <=
+    gte >=
 
-      媒体查询语法：
-        @media  媒体类型  [not|and|only] (表达式){
-          css code
-        }
-    */
-    @media screen and (max-width:469px){
-      .box{
-        background: blue;
-      }
-    }
-    /* && */
-    @media screen and (min-width:469px) and (max-width:769px){
-      .box{
-        background: green;
-      }
-    } 
-    @media screen and (min-width:769px) and (max-width:1200px){
-      .box{
-        background: black;
-      }
-    }
-    @media screen and (min-width:1200px) {
-      .box{
-        background-color: #ccc;
-      }
-    }
-    /* dpr */
-    @media (-webkit-device-pixel-ratio:3) {
-      body{
-        background: red;
-      }
-    }
-    @media (-webkit-device-pixel-ratio:2) {
-      body{
-        background: green;
-      }
-    }
-
-  </style>
+   -->
+  <!--[if lt IE 9]>
+    <script src="./js/lib/html5shiv.js"></script>
+    <script src="./js/lib/respond.js"></script>
+  <![endif]-->
 </head>
-
 <body>
-  <!-- 响应式布局
-    一次开始，多处使用
-    根据当前屏幕尺寸宽度改变样式
-  -->
-  <div class="box"></div>
+  <h1>Hello World!</h1>
+  <ul>
+    <li>fdsjaklfj</li>
+    <li>fdsjaklfj</li>
+    <li>fdsjaklfj</li>
+    <li>fdsjaklfj</li>
+    <li>fdsjaklfj</li>
+  </ul>
+  <ol>
+    <li>fjdsalflj</li>
+    <li>fjdsalflj</li>
+    <li>fjdsalflj</li>
+    <li>fjdsalflj</li>
+    <li>fjdsalflj</li>
+  </ol>
+  富家大室克隆富家大室克隆父级
+  <a href="#">附近的开始了泛了</a>
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/bootstrap.js"></script>
 </body>
-
 </html>

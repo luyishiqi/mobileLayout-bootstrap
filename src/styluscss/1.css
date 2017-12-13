@@ -1,0 +1,76 @@
+:768px,
+.box {
+  width: 100px;
+}
+:768px .text,
+.box .text {
+  text-align: center;
+  color: #f00;
+}
+.box {
+  transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+@media (screenXs) {
+  .col-xs-1 {
+    width: 8.333333333333334%;
+  }
+}
+@media (screenXs) {
+  .col-xs-2 {
+    width: 16.666666666666668%;
+  }
+}
+@media (screenXs) {
+  .col-xs-3 {
+    width: 25%;
+  }
+}
+@media (screenXs) {
+  .col-xs-4 {
+    width: 33.333333333333336%;
+  }
+}
+@media (screenXs) {
+  .col-xs-5 {
+    width: 41.66666666666667%;
+  }
+}
+@media (screenXs) {
+  .col-xs-6 {
+    width: 50%;
+  }
+}
+@media (screenXs) {
+  .col-xs-7 {
+    width: 58.333333333333336%;
+  }
+}
+@media (screenXs) {
+  .col-xs-8 {
+    width: 66.66666666666667%;
+  }
+}
+@media (screenXs) {
+  .col-xs-9 {
+    width: 75%;
+  }
+}
+@media (screenXs) {
+  .col-xs-10 {
+    width: 83.33333333333334%;
+  }
+}
+@media (screenXs) {
+  .col-xs-11 {
+    width: 91.66666666666667%;
+  }
+}
+@media (screenXs) {
+  .col-xs-12 {
+    width: 100%;
+  }
+}
